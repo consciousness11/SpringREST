@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Product</title>
+        <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.0.1/css/bootstrap.min.css}"/>
+        <meta charset="UTF-8"></meta>
+    </head>
+
+    <body>
+        <div align="center">
+            <h1>Create new product</h1>
+            <br/>
+            <form action="#" th:action="@{/save}" th:object="${product}" method="post">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" th:field="*{name}" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"/>
+                </div>
+                <input  class="form-control" type="text" th:field="*{spec}"/>   
+                <input class="form-control" type="text" th:field="*{price}"/>
+                <button type="submit"  class= "btn btn-primary" >save</button>
+            </form>
+        </div>
+        <script th:src="@{/webjars/popper.js/2.9.2/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/5.0.1/js/bootstrap.min.js}"></script>
+    </body>
+</html>
