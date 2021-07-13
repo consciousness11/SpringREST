@@ -28,12 +28,21 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProductApiController {
     @Autowired
     private ProductService service;
+    @Autowired 
+    private SearchService sservice;
     @CrossOrigin
     @GetMapping("/api/products")
     public List<Product> list() {
         return service.listAll();
     }
 
+    @GetMapping("/api/search")
+    public void search() {
+        sservice.findItems();
+    }
+    
+    
+    
     @GetMapping("/api/products/{id}")
     public ResponseEntity<Product> get(@PathVariable Integer id) {
         try {
