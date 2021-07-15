@@ -5,11 +5,13 @@
  */
 package com.lab.restapp;
 
+import java.util.List;
+
 /**
  *
  * @author Marut
  */
 public interface Strategy {
-    void doSearch();
+    public List<Product> doSearch(String name);
     StrategyName getStrategyName();
 }

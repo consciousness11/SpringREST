@@ -5,6 +5,8 @@
  */
 package com.lab.restapp;
 
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,9 +15,11 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class StrategyMixed implements Strategy{
+    @Autowired
+    private ProductRepository repo;
     @Override
-    public void doSearch(){
-        System.out.println("Searching completed ...");
+    public List<Product> doSearch(String name){
+         return repo.find(name);
     }
     
     @Override

@@ -17,12 +17,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class StrategyBinary implements Strategy{
     @Autowired
-   private ProductService service;
+    private ProductRepository repo;
     @Override
-    public void doSearch(){
-       List <Product> pd =  (ArrayList <Product>) service.search("Infinity");
-       Product p =pd.get(0);
-        System.out.println(p.getId()+p.getName()+p.getSpec()+p.getPrice() );
+    public List<Product> doSearch(String name){
+      return repo.find(name);
     }
     
     @Override

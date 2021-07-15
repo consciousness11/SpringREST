@@ -36,9 +36,9 @@ public class ProductApiController {
         return service.listAll();
     }
 
-    @GetMapping("/api/search")
-    public void search() {
-        sservice.findItems();
+    @GetMapping("/api/search/{item}")
+    public List<Product> search(@PathVariable String item) {
+       return sservice.findItems(item);
     }
     
     
