@@ -20,6 +20,9 @@ public class ProductService {
     @Autowired
     private ProductRepository repo;
     
+    @Autowired
+    private ReportRepository reportrepo;
+        
     public List<Product> listAll(){
     return repo.findAll();
     }
@@ -35,4 +38,7 @@ public class ProductService {
 //    public List<Product>  search(String name){
 //    return repo.find(name);
 //    }
+    public List<ProductDetails> productList(){
+    return reportrepo.productReport();
+    }
 }

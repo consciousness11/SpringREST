@@ -77,4 +77,9 @@ public class ProductApiController {
     service.delete(id);
     }
     
+    @GetMapping("/api/productreport")
+     public List<ProductDetails> Report() {
+       return service.productList();
+    }
+    
 }
