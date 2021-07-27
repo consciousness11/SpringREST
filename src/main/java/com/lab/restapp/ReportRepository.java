@@ -14,7 +14,7 @@ import org.springframework.data.repository.NoRepositoryBean;
  *
  * @author Marut
  */
-
+// NOT USED IN SERVICE
 public interface ReportRepository extends JpaRepository<ProductDetails,Integer> {
      @Query(value="SELECT * FROM productdetails",nativeQuery=true)
     public List<ProductDetails> productReport();

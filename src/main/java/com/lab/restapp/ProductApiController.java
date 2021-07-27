@@ -78,7 +78,7 @@ public class ProductApiController {
     }
     
     @GetMapping("/api/productreport")
-     public List<ProductDetails> Report() {
+     public List<IproductDetails> Report() {
        return service.productList();
     }
     

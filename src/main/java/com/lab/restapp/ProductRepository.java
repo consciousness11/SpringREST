@@ -17,7 +17,9 @@ import org.springframework.data.repository.query.Param;
 public interface ProductRepository extends JpaRepository<Product,Integer>{
      @Query("SELECT p FROM Product p WHERE LOWER(p.name) LIKE %:name%")
     public List<Product> find(@Param("name") String name);
+     
+    // THIS METHOD IS USED FOR VIEW IMPLEMENTATION 
+    @Query(value="SELECT * FROM productdetails",nativeQuery=true)
+    List<IproductDetails> productReport();
     
-     @Query(nativeQuery = true, value = "SELECT * FROM productdetails")
-     List<ProductDetails> productReport();
 }

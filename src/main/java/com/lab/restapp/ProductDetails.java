@@ -17,6 +17,8 @@ import org.hibernate.annotations.Immutable;
  *
  * @author Marut
  */
+
+// THIS IS NOT USED FOR VIEW 
 @Entity
 @Table(name = "productdetails" )
 @Immutable
