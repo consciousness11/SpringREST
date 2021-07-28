@@ -1,6 +1,8 @@
-com\lab\restapp\Application.class
 com\lab\restapp\ProductApiController.class
 com\lab\restapp\ProductController.class
+com\lab\restapp\ErrorController.class
 com\lab\restapp\ProductRepository.class
+com\lab\restapp\SpringSecurityConfig.class
 com\lab\restapp\ProductService.class
+com\lab\restapp\Application.class
 com\lab\restapp\Product.class

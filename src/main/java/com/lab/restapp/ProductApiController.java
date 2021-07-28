@@ -28,21 +28,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProductApiController {
     @Autowired
     private ProductService service;
-    @Autowired 
-    private SearchService sservice;
     @CrossOrigin
     @GetMapping("/api/products")
     public List<Product> list() {
         return service.listAll();
     }
 
-    @GetMapping("/api/search/{item}")
-    public List<Product> search(@PathVariable String item) {
-       return sservice.findItems(item);
-    }
-    
-    
-    
     @GetMapping("/api/products/{id}")
     public ResponseEntity<Product> get(@PathVariable Integer id) {
         try {
@@ -75,11 +66,6 @@ public class ProductApiController {
     @DeleteMapping("/api/products/{id}")
     public void delete(@PathVariable Integer id ){
     service.delete(id);
-    }
-    
-    @GetMapping("/api/productreport")
-     public List<IproductDetails> Report() {
-       return service.productList();
     }
     
 }

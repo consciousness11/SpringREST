@@ -15,12 +15,11 @@ import javax.persistence.Id;
  * @author Marut
  */
 @Entity
-public class Product implements ProductInterface {
+public class Product {
 
     /**
      * @return the name
      */
-    @Override
     public String getName() {
         return name;
     }
@@ -28,7 +27,6 @@ public class Product implements ProductInterface {
     /**
      * @param name the name to set
      */
-    @Override
     public void setName(String name) {
         this.name = name;
     }
@@ -36,7 +34,6 @@ public class Product implements ProductInterface {
     /**
      * @return the price
      */
-    @Override
     public float getPrice() {
         return price;
     }
@@ -44,7 +41,6 @@ public class Product implements ProductInterface {
     /**
      * @param price the price to set
      */
-    @Override
     public void setPrice(float price) {
         this.price = price;
     }
@@ -52,7 +48,6 @@ public class Product implements ProductInterface {
     /**
      * @return the spec
      */
-    @Override
     public String getSpec() {
         return spec;
     }
@@ -60,7 +55,6 @@ public class Product implements ProductInterface {
     /**
      * @param spec the spec to set
      */
-    @Override
     public void setSpec(String spec) {
         this.spec = spec;
     }
@@ -79,7 +73,6 @@ public class Product implements ProductInterface {
     }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Override
     public Integer getId(){
         return id;
     }
@@ -87,7 +80,6 @@ public class Product implements ProductInterface {
     /**
      * @param id the id to set
      */
-    @Override
     public void setId(Integer id) {
         this.id = id;
     }
